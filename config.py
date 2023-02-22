@@ -4,11 +4,10 @@ import sys
 import urllib
 from http.cookiejar import CookieJar
 
-sys.path.append(r"C:\Users\shash\Desktop\programing\Project\RE")
 from basic_funcs import optionsX, check_one, eRX, check, Int, unDuplicate
 
-anime_folder = r"C:\Users\shash\Downloads\psyched\anime\downloaders\self\anime-downloader-v2\browser_pages\animes/"
-series_folder = r"C:\Users\shash\Downloads\psyched\anime\downloaders\self\anime-downloader-v2\browser_pages\series/Watching/"
+anime_folder = r"C:\Users\USER/" # downloads to anime_folder + anime-name
+series_folder = r"C:\Users\USER/" # the downloader has not been put
 gogo_url = r"https://www1.gogoanime.bid/"
 khor_url = r"https://animekhor.xyz/"
 khor_query_url = r"https://animekhor.xyz/wp-admin/admin-ajax.php"
@@ -30,43 +29,18 @@ sflix_episode_vids = sflix_base + "ajax/v2/tv/seasons/{}"  # .format(data-id)  r
 sflix_season_vids = "https://bingewatch.to/ajax/movie/season/episodes/{}"
 get_source_for_ep_id = "https://bingewatch.to/ajax/movie/episode/server/sources/{}"
 stream_sb_dld_base = "https://streamsb.net/dl?op=download_orig&id={}&mode={}&hash={}"
-link_extractors_x_git_url = \
-    "https://github.com/Devilboy04/warisleechx/blob/0737192efb00c8ae040dcf478bca8ed33fdc005e/tobrot/helper_funcs/direct_link_generator.py"
 requirements_list = ["aiohttp", "aria2p", "python-dotenv", "hachoir", "Pillow", "pyrogram", "tgcrypto", "youtube_dl",
                      "hurry.filesize", "beautifulsoup4", "bs4", "lxml", "requests", "js2py", "lk21", "pybase64",
                      "cfscrape",
-                     ]
+                     ] # some have not been used in the added files and some are missing as i didnt update this part
 
 gogo_ajax_help = {"type": {1: "sub", 2: "dub", 3: "chinese"}, "id": {1: "today", 2: "this week", 3: "this month"}}
-date_time_format_help = {
-    "%a": "Weekday, short version",
-    "%A": "Weekday, full version",
-    "%w": "0-6, weekday number, 0=sunday",
-    "%d": "Day of month 01-31",
-    "%b": "Month name, short version",
-    "%B": "Month name, full version",
-    "%m": "Month as a number 01-12, January is 01",
-    "%y": "Year, short version",
-    "%Y": "Year, full version",
-    "%H": "Hour 00-23",
-    "%I": "Hour 00-12",
-    "%p": "AM/PM",
-    "%M": "Minute 00-59",
-    "%S": "Second 00-59",
-    "%f": "Microsecond 000000-999999",
-    "%j": "Day number of year 001-366 (366 for leap year, 365 otherwise)",
-    "%U": "Week number of year, Sunday as the first day of week, 00-53",
-    "%W": "Week number of year, Monday as the first day of week, 00-53",
-    "%c": "Tue Dec 10 17:41:00 2019	Local version of date and time",
-    "%x": "12/10/19	Local version of date (mm/dd/yy)",
-    "%X": "17:41:00	Local version of time (hh:mm:ss)",
-}
 # print(gogo_recent_base.format(2, 1))
 dt_format = "%Y-%m-%d %H:%M:%S.%f"
-DEBUG = False
+DEBUG = False # dosent matter
 
 
-def page_process(url: str, parseX=True, strXf=True, timeout=35, method="GET", addnl=None, rem=None, data=None):
+def page_process(url: str, parseX=True, strXf=True, timeout=35, method="GET", addnl=None, rem=None, data=None): # very important
     """
     :return soup data html parser
     :var url url of the page to be loaded
@@ -115,12 +89,6 @@ load page and return the beautiful soup processed data
     return soup
 
 
-# def loader_post():
-#     cj = CookieJar()
-#     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
-
-
-
 def ks(obj):
     return list(obj.keys())
 
@@ -155,7 +123,6 @@ def merge(obj1, obj2, first_prior=[None, ], second_prior=[None, ]):
                     continue
         return obj1
     elif type(obj1) == type(obj2) == list:
-        # print("merging lists")
         for i in obj2:
             obj1.append(i)
         return unDuplicate(obj1)
