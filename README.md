@@ -2,4 +2,8 @@
 
 download from animekhor
 
-will add gogo
+  ->import khor will run download
+
+added gogo downloader
+  
+  ->import gogo and run gogo.f(input("search term : ")
