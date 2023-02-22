@@ -8,11 +8,8 @@ import base64
 import requests
 import lxml.html as htmlparser
 from tqdm import tqdm
-sys.path.append(r"C:\Users\shash\Desktop\programing\Project\RE\sourcePy")
 from config import page_process as p, anime_folder, khor_url, stream_sb_aliases, fembed_aliases, dodostream_aliases, \
     mp4upload_aliases, dt_format, stream_sb_dld_base, merge, ks, khor_query_url, daily_motion_meta_url
-
-sys.path.append(r"C:\Users\shash\Desktop\programing\Project\RE")
 from basic_funcs import optionsX, check_one, eRX, check, Int
 
 
