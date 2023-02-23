@@ -2,11 +2,11 @@
 
 download from animekhor
 
-  ->import khor will run download
+  ->python khor.py
 
 added gogo downloader
   
-  ->import gogo and run gogo.f(input("search term : ")
+  ->python gogo.py
 
 
 ## set anime_folder in config before running
