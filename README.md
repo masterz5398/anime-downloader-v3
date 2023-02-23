@@ -10,4 +10,6 @@ added gogo downloader
   ->python gogo.py
 
 
-## set anime_folder in config before running
+### set anime_folder in config also
+
+### put ffmpeg on system path before running
