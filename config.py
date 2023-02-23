@@ -31,7 +31,7 @@ stream_sb_dld_base = "https://streamsb.net/dl?op=download_orig&id={}&mode={}&has
 requirements_list = ["aiohttp", "aria2p", "python-dotenv", "hachoir", "Pillow", "pyrogram", "tgcrypto", "youtube_dl",
                      "hurry.filesize", "beautifulsoup4", "bs4", "lxml", "requests", "js2py", "lk21", "pybase64",
                      "cfscrape",
-                     ] # some have not been used in the added files and some are missing as i didnt update this part
+                     ] # some have not been used in the added files and some may be missing as i didnt update this part
 
 gogo_ajax_help = {"type": {1: "sub", 2: "dub", 3: "chinese"}, "id": {1: "today", 2: "this week", 3: "this month"}}
 # print(gogo_recent_base.format(2, 1))
