@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import urllib.request
 import sys
 import urllib
-from http.cookiejar import CookieJar
 
 from basic_funcs import optionsX, check_one, eRX, check, Int, unDuplicate
 
