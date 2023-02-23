@@ -516,3 +516,5 @@ def create_file_details(url, det=None):
 def f(t):
     srch = search_(t)
     create_file_details(srch[list(srch.keys())[0]]["anime details page"], srch)
+    
+f(input("to search: "))
