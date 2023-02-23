@@ -7,3 +7,6 @@ download from animekhor
 added gogo downloader
   
   ->import gogo and run gogo.f(input("search term : ")
+
+
+## set anime_folder in config before running
