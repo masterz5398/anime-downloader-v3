@@ -1,7 +1,8 @@
 # anime-downloader-v3
 
 download from animekhor
-
+  
+  -> some bugs are there will fix tom
   ->python khor.py
 
 added gogo downloader
